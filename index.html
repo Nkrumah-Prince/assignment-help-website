@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Study Help & Tutoring – Book an Appointment</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f6f7fb; color: #222; }
+    header { background: #111; color: #fff; padding: 20px; text-align: center; }
+    main { max-width: 900px; margin: auto; padding: 20px; }
+    .card { background: #fff; border-radius: 10px; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); }
+    h2 { margin-top: 0; }
+    .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+    .service { border: 1px solid #ddd; border-radius: 8px; padding: 15px; }
+    .price { font-weight: bold; color: #0a7; }
+    label { display: block; margin-top: 10px; }
+    input, select, textarea, button { width: 100%; padding: 10px; margin-top: 5px; border-radius: 6px; border: 1px solid #ccc; }
+    button { background: #111; color: #fff; cursor: pointer; margin-top: 15px; }
+    button:hover { background: #333; }
+    footer { text-align: center; padding: 15px; font-size: 14px; color: #666; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Study Help & Assignment Support</h1>
+    <p>Book an appointment for tutoring, guidance, and practical support</p>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2>Services & Pricing</h2>
+      <div class="services">
+        <div class="service">
+          <h3>Normal Assignment Guidance</h3>
+          <p>Explanation, outline, and review (non-practical).</p>
+          <p class="price">GHS 50 – 100</p>
+        </div>
+        <div class="service">
+          <h3>Practical Assignment Support</h3>
+          <p>Step-by-step help with labs, tools, or demos.</p>
+          <p class="price">GHS 100 – 200</p>
+        </div>
+        <div class="service">
+          <h3>Project / Coursework Coaching</h3>
+          <p>Ongoing support until submission.</p>
+          <p class="price">From GHS 300</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Book an Appointment</h2>
+      <form onsubmit="submitForm(event)">
+        <label>Full Name
+          <input type="text" required />
+        </label>
+        <label>Email or WhatsApp Number
+          <input type="text" required />
+        </label>
+        <label>Course
+          <input type="text" placeholder="e.g. Cyber Security" required />
+        </label>
+        <label>Assignment Type
+          <select required>
+            <option value="">Select one</option>
+            <option>Normal (Non-practical)</option>
+            <option>Practical</option>
+          </select>
+        </label>
+        <label>Preferred Date
+          <input type="date" required />
+        </label>
+        <label>Details
+          <textarea rows="4" placeholder="Briefly describe what you need help with" required></textarea>
+        </label>
+        <button type="submit">Book Appointment</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Study Help Service • Guidance & Tutoring Only</p>
+  </footer>
+
+  <script>
+    function submitForm(e) {
+      e.preventDefault();
+      alert('Booking received! You will be contacted shortly.');
+    }
+  </script>
+</body>
+</html>
